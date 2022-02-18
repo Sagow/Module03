@@ -1,5 +1,5 @@
-#ifndef DIAMONDTRAP_HPP
-# define DIAMONDTRAP_HPP
+#ifndef DIAMONDTRAP_hitpointsP
+# define DIAMONDTRAP_hitpointsP
 
 # include <iostream>
 # include <string>
@@ -12,15 +12,16 @@ class DiamondTrap : public ScavTrap, public FragTrap
 	public:
 
 		DiamondTrap();
-		DiamondTrap(std::string name);
 		DiamondTrap( DiamondTrap const & src );
 		~DiamondTrap();
+		DiamondTrap &	operator=( DiamondTrap const & rhs );
 
-		using ScavTrap::attack;
+		DiamondTrap(std::string name);
+
+		void	attack(const std::string& target);
 		void whoAmI();
 
 	private:
-
 		std::string	_name;
 
 };

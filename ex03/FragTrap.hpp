@@ -1,5 +1,5 @@
-#ifndef FRAGTRAP_HPP
-# define FRAGTRAP_HPP
+#ifndef FRAGTRAP_hitpointsP
+# define FRAGTRAP_hitpointsP
 
 # include <iostream>
 # include <string>
@@ -11,13 +11,14 @@ class FragTrap : virtual public ClapTrap
 	public:
 
 		FragTrap();
-		FragTrap(std::string name);
 		FragTrap( FragTrap const & src );
 		~FragTrap();
-
 		FragTrap &		operator=( FragTrap const & rhs );
 
-		void highFivesGuys(void);
+		FragTrap(std::string name);
+
+		void	attack(const std::string& target);
+		void	highFivesGuys(void);
 		void	setHP(void);
 		void	setEP(void);
 		void	setAD(void);

@@ -34,9 +34,9 @@ ScavTrap::~ScavTrap()
 ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
 {
 	_name = rhs._name;
-	_hp = rhs._hp;
-	_ep = rhs._ep;
-	_ad = rhs._ad;
+	_hitpoints = rhs._hitpoints;
+	_energy = rhs._energy;
+	_attackDamage = rhs._attackDamage;
 	return *this;
 }
 
@@ -46,12 +46,12 @@ ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
 
 void		ScavTrap::attack(const std::string& target)
 {
-	if (_ep > 0 && _hp > 0)
+	if (_energy > 0 && _hitpoints > 0)
 	{
-		_ep--;
-		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _ad << " points of damage!" << std::endl;
+		_energy--;
+		std::cout << "ScavTrap " << _name << " attacks " << target << ", causing " << _attackDamage << " points of damage!" << std::endl;
 	}
-	else if (_hp > 0)
+	else if (_hitpoints > 0)
 		std::cout << "ScavpTrap " << _name << " doesn't have enough energy to attack." << std::endl;
 	else
 		std::cout << "ScavTrap " << _name << " is dead, it can't attack anymore." << std::endl;
@@ -64,17 +64,17 @@ void	ScavTrap::guardGate()
 
 void	ScavTrap::setHP(void)
 {
-	_hp = 100;
+	_hitpoints = 100;
 }
 
 void	ScavTrap::setEP(void)
 {
-	_ep = 50;
+	_energy = 50;
 }
 
 void	ScavTrap::setAD(void)
 {
-	_ad = 20;
+	_attackDamage = 20;
 }
 
 /*

@@ -31,14 +31,26 @@ DiamondTrap::~DiamondTrap()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
+DiamondTrap &				DiamondTrap::operator=( DiamondTrap const & rhs )
+{
+	_name = rhs._name;
+	ClapTrap::_name = rhs.ClapTrap::_name;
+	_hitpoints = rhs._hitpoints;
+	_energy = rhs._energy;
+	_attackDamage = rhs._attackDamage;
+	return (*this);
+}
 
 /*
 ** --------------------------------- METHODS ----------------------------------
 */
-
+void		DiamondTrap::attack(const std::string& target)
+{
+	ScavTrap::attack(target);
+}
 void DiamondTrap::whoAmI()
 {
-	std::cout << "I\'m a Diamond Trap named " << _name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
+	std::cout << "I'm a Diamond Trap named " << _name << " and my ClapTrap name is " << ClapTrap::_name << std::endl;
 }
 
 /*

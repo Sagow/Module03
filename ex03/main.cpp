@@ -20,7 +20,7 @@ int main(void)
     Augustin.highFivesGuys();
     Augustin.whoAmI();
 
-    Copie = Augustin;
+    Copie = Mickael;
 
     return (0);
 }

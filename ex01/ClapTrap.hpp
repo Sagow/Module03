@@ -1,5 +1,5 @@
-#ifndef CLAPTRAP_HPP
-# define CLAPTRAP_HPP
+#ifndef CLAPTRAP_hitpointsP
+# define CLAPTRAP_hitpointsP
 
 # include <iostream>
 # include <string>
@@ -10,11 +10,11 @@ class ClapTrap
 	public:
 
 		ClapTrap();
-		ClapTrap(std::string myname);
 		ClapTrap( ClapTrap const & src );
 		~ClapTrap();
-
 		ClapTrap &		operator=( ClapTrap const & rhs );
+
+		ClapTrap(std::string myname);
 
 		void		attack(const std::string& target);
 		void		takeDamage(unsigned int amount);
@@ -28,9 +28,9 @@ class ClapTrap
 	protected:
 
 		std::string		_name;
-		unsigned int	_hp;
-		unsigned int	_ep;
-		unsigned int	_ad;
+		unsigned int	_hitpoints;
+		unsigned int	_energy;
+		unsigned int	_attackDamage;
 
 
 };

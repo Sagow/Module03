@@ -1,5 +1,5 @@
-#ifndef SCAVTRAP_HPP
-# define SCAVTRAP_HPP
+#ifndef SCAVTRAP_hitpointsP
+# define SCAVTRAP_hitpointsP
 
 # include <iostream>
 # include <string>
@@ -11,11 +11,11 @@ class ScavTrap : virtual public ClapTrap
 	public:
 
 		ScavTrap();
-		ScavTrap(std::string name);
 		ScavTrap( ScavTrap const & src );
 		~ScavTrap();
-
 		ScavTrap &		operator=( ScavTrap const & rhs );
+
+		ScavTrap(std::string name);
 
 		void	attack(const std::string& target);
 		void	guardGate();
