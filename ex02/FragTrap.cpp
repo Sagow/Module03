@@ -1,18 +1,18 @@
-#include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
 /*
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name)
+FragTrap::FragTrap(std::string name) : ClapTrap(name)
 {
-	std::cout << "Constructeur de ScavTrap" << std::endl;
+	std::cout << "Constructeur de FragTrap" << std::endl;
 	_hp = 100;
-	_ep = 50;
-	_ad = 20;
+	_ep = 100;
+	_ad = 30;
 }
 
-ScavTrap::ScavTrap( const ScavTrap & src ) : ClapTrap(src._name)
+FragTrap::FragTrap( const FragTrap & src ) : ClapTrap(src._name)
 {
 	*this = src;
 }
@@ -22,9 +22,9 @@ ScavTrap::ScavTrap( const ScavTrap & src ) : ClapTrap(src._name)
 ** -------------------------------- DESTRUCTOR --------------------------------
 */
 
-ScavTrap::~ScavTrap()
+FragTrap::~FragTrap()
 {
-	std::cout << "Destructeur de ScavTrap" << std::endl;
+	std::cout << "Destructeur de FragTrap" << std::endl;
 }
 
 
@@ -32,7 +32,7 @@ ScavTrap::~ScavTrap()
 ** --------------------------------- OVERLOAD ---------------------------------
 */
 
-ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
+FragTrap &				FragTrap::operator=( FragTrap const & rhs )
 {
 	_name = rhs._name;
 	_hp = rhs._hp;
@@ -45,9 +45,10 @@ ScavTrap &				ScavTrap::operator=( ScavTrap const & rhs )
 ** --------------------------------- METHODS ----------------------------------
 */
 
-void	ScavTrap::guardGate()
+void	FragTrap::highFivesGuys(void)
+
 {
-	std::cout << _name << "entered Gate keeper mode !" << std::endl;
+	std::cout << _name << "requests a high five !" << std::endl;
 }
 
 /*
