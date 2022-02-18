@@ -9,6 +9,7 @@ class ClapTrap
 
 	public:
 
+		ClapTrap();
 		ClapTrap(std::string myname);
 		ClapTrap( ClapTrap const & src );
 		~ClapTrap();
@@ -20,6 +21,9 @@ class ClapTrap
 		void		beRepaired(unsigned int amount);
 
 		void		setAttackDamage(unsigned int ad);
+		unsigned int	getHP(void);
+		unsigned int	getEP(void);
+		unsigned int	getAD(void);
 
 	protected:
 

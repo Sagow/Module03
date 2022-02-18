@@ -4,6 +4,8 @@
 ** ------------------------------- CONSTRUCTOR --------------------------------
 */
 
+ClapTrap::ClapTrap() : _name("Anonymous") {}
+
 ClapTrap::ClapTrap(std::string myname)
 {
 	_name = myname;
@@ -101,5 +103,19 @@ void		ClapTrap::setAttackDamage(unsigned int ad)
 	_ad = ad;
 }
 
+unsigned int	ClapTrap::getHP(void)
+{
+	return (_hp);
+}
+
+unsigned int	ClapTrap::getEP(void)
+{
+	return (_ep);
+}
+
+unsigned int	ClapTrap::getAD(void)
+{
+	return (_ad);
+}
 
 /* ************************************************************************** */
